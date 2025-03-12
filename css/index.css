@@ -285,7 +285,7 @@ html{
 
 @media (max-width: 768px) {
     .find-property .row {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .property-image, .property-content {
@@ -487,7 +487,7 @@ html{
 
 @media (max-width: 768px) {
     .row {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .contact-content {
