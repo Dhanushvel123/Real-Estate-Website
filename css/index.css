@@ -1,0 +1,864 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.9); /* Transparent white */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    transition: all 0.3s;
+    top:20px;
+    display: flex;
+    margin-top: 70px 0px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+#goTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#goTopBtn:hover {
+    background-color: #218838;
+}
+
+/* Icon Size */
+#goTopBtn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    #goTopBtn {
+        width: 40px;
+        height: 40px;
+    }
+
+    #goTopBtn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+/* Hero Section */
+.hero-section {
+    padding: 30px 0;
+}
+
+.text-section {
+    padding: 20px;
+}
+
+.text-section h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.text-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Image Section */
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container img {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-section {
+        text-align: center;
+    }
+    
+    .image-section {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-section h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-section p {
+        font-size: 1rem;
+    }
+
+    .img-container {
+        flex-direction: column;
+    }
+}
+
+/* Search Form Container */
+.search-container {
+    background-color: #14b8a6; /* Teal Background */
+    padding: 40px;
+}
+
+/* Input Fields and Dropdowns */
+.form-control, .form-select {
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Search Button */
+.btn-primary {
+    background-color: #0c2e4d; /* Dark Blue */
+    border: none;
+    height: 45px;
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .col-sm-12 {
+        margin-bottom: 10px;
+    }
+}
+
+/* Property Card Styling */
+.property-card {
+    background: #ffffff;
+    border: 2px dashed #14b8a6; /* Dashed border */
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Keep image inside a separate container */
+.property-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.property-img img {
+    width: 60px;
+    height: auto;
+    border: 2px dashed #14b8a6;
+    border-radius: 50%;
+    padding: 5px;
+    background: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect - Background Changes but Image Stays */
+.property-card:hover {
+    background: #14b8a6;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.property-card:hover .property-img img {
+    background: #ffffff; /* Keep the image background white */
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+    .property-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .property-card {
+        padding: 10px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .property-card {
+        padding: 8px;
+        margin: 3px;
+    }
+}
+
+/* Find Property Section */
+.find-property {
+    padding: 50px 0;
+    position: relative;
+}
+
+/* Left Side Image */
+.prop-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Right Side Content */
+.property-content {
+    color: #000;
+    padding: 20px;
+}
+
+.property-content h2 {
+    font-weight: bold;
+    color: #0d1b2a;
+}
+
+.property-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.property-content ul li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.property-content ul li::before {
+    content: "✔";
+    color: green;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background: #14b8a6;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #0d6efd;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .find-property {
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .find-property .row {
+        flex-direction: column;
+    }
+
+    .property-image, .property-content {
+        text-align: center;
+    }
+
+    .property-content ul {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .property-content h2 {
+        font-size: 22px;
+    }
+
+    .property-content p {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+/* Property Listing Section */
+.property-listing {
+    padding: 50px 0;
+}
+
+.section-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+}
+
+/* Property Cards */
+.properties-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.properties-card h4 {   
+    font-weight: bold;
+    color: #00b98e;
+    margin-bottom: 10px;
+}
+.property-image {
+    position: relative;
+}
+
+.property-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+ 
+}
+
+.property-image:hover img {
+    transform: scale(1.05);
+}
+.property-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.for-sale {
+    background: green;
+}
+
+.for-rent {
+    background: green;
+}
+
+.property-type {
+    position: absolute;
+    bottom: 3px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color:#00b98e;
+    background-color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.property-info {
+    padding: 15px;
+}
+
+.property-details span {
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .property-card {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .property-info h4 {
+        font-size: 18px;
+    }
+}
+
+/* Contact Section */
+.contact-container {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    border: 2px dashed #b5e3c3;
+    border-radius: 10px;
+}
+
+/* Contact Image */
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Contact Content */
+.contact-content {
+    padding: 20px;
+}
+
+.contact-content h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #0d2b5d;
+}
+
+.contact-content p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-call {
+    background: #28a745;
+}
+
+.btn-call:hover {
+    background: #1e7e34;
+}
+
+.btn-appointment {
+    background: #002147;
+}
+
+.btn-appointment:hover {
+    background: #00112a;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .contact-content {
+        text-align: center;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .contact-content {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-content h2 {
+        font-size: 22px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Section Styling */
+.agents-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0d2b5d;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+/* Agent Card */
+.agent-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.agent-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Agent Image */
+.agent-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Social Icons (Overlay on Image Bottom) */
+.social-icons {
+    position: absolute;
+    bottom:85px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px 15px;
+    border-radius: 50px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons a {
+    color: #0d2b5d;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #28a745;
+}
+
+/* Agent Name & Designation */
+.agent-card h4 {
+    font-size: 18px;
+    color: #0d2b5d;
+    margin-top: 15px;
+}
+
+.agent-card p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .social-icons {
+        bottom: 10px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        bottom: 5px;
+    }
+    
+    .agent-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .agent-card {
+        padding: 15px;
+    }
+    
+    .social-icons {
+        bottom: 0;
+        padding: 4px 8px;
+    }
+}
+
+/* Section Styling */
+.reviews-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0d2b5d;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+/* Review Card */
+.review-card {
+    background: #eafaf1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    border: 1px dashed #b2e2c4;
+}
+
+.review-text {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Client Info */
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.client-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.client-info h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #0d2b5d;
+}
+
+.client-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .review-card {
+        padding: 15px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+
+    .client-info img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .client-info h5 {
+        font-size: 16px;
+    }
+}
+
+/* Footer Section */
+.footer {
+    background-color: #0a2847;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer p, .footer a {
+    font-size: 14px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+/* Social Icons */
+.fsocial-icons a {
+    color: #fff;
+    font-size: 13px;
+    margin-right: 10px;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px gray solid;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.fsocial-icons a:hover {
+    color: #17a2b8;
+}
+.fsocial-icons a #yt:hover{
+    color: red;
+}
+.fsocial-icons a #lin:hover{
+    color: black;
+}
+.fsocial-icons a #fb:hover{
+    color: #0d6efd;
+}
+.fsocial-icons a #tw:hover{
+    color: whitesmoke;
+}
+/* Quick Links */
+.quick-links {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin-bottom: 8px;
+}
+
+.quick-links a {
+    color: #ccc;
+}
+
+.quick-links a:hover {
+    text-decoration: underline;
+}
+
+/* Photo Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+border: 4px solid white;
+}
+
+/* Newsletter */
+.newsletter {
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.newsletter button {
+    background-color: #17a2b8;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #138496;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: start;
+    
+    padding-top: 15px;
+}
+
+.footer-bottom a {
+    color: #17a2b8;
+}
+
+.footer-links {
+    text-align: end;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .footer-col {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletter {
+        flex-direction: column;
+    }
+
+    .newsletter input {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .newsletter button {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
